@@ -1,0 +1,7 @@
+[gd_scene load_steps=3 format=3 uid="uid://oi70x38wccgl"]
+
+[ext_resource type="PackedScene" uid="uid://qi51k2kv57yr" path="res://scenes/Entities/Entity.tscn" id="1_egtum"]
+[ext_resource type="Script" path="res://scenes/Entities/Enemies/Enemy.gd" id="2_27bt5"]
+
+[node name="Entity" instance=ExtResource("1_egtum")]
+script = ExtResource("2_27bt5")

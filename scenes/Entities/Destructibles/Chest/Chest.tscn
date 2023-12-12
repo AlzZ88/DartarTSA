@@ -1,0 +1,72 @@
+[gd_scene load_steps=11 format=3 uid="uid://cpvsgxnu26ko0"]
+
+[ext_resource type="PackedScene" uid="uid://baq1ma25rnm6o" path="res://scenes/Entities/Destructibles/Destructible.tscn" id="1_n4de1"]
+[ext_resource type="Script" path="res://scenes/Entities/Destructibles/Chest/Chest.gd" id="2_tov00"]
+[ext_resource type="Texture2D" path="res://textures/chest_02.png" id="3_8n6uk"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4855a"]
+atlas = ExtResource("3_8n6uk")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_joe7c"]
+atlas = ExtResource("3_8n6uk")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5svfj"]
+atlas = ExtResource("3_8n6uk")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1xwud"]
+atlas = ExtResource("3_8n6uk")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ywnlb"]
+atlas = ExtResource("3_8n6uk")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8uebh"]
+atlas = ExtResource("3_8n6uk")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_j72nj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4855a")
+}],
+"loop": true,
+"name": &"closed",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_joe7c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5svfj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1xwud")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ywnlb")
+}],
+"loop": true,
+"name": &"open",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8uebh")
+}],
+"loop": true,
+"name": &"opened",
+"speed": 5.0
+}]
+
+[node name="Destructible" instance=ExtResource("1_n4de1")]
+script = ExtResource("2_tov00")
+
+[node name="Sprites" parent="." index="0"]
+sprite_frames = SubResource("SpriteFrames_j72nj")
+animation = &"closed"
