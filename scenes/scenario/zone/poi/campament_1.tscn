@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://b0gqfhi6mqra"]
+
+[ext_resource type="PackedScene" uid="uid://cqf38hkljl6cf" path="res://scenes/scenario/zone/poi/point_of_interest.tscn" id="1_itgty"]
+
+[node name="campament_1" instance=ExtResource("1_itgty")]

@@ -1,7 +1,19 @@
 extends Node2D
 var _world := preload("res://World.tscn" )
 func _ready():
-	_init_scenario(Scenario.new("Scnario_1"))
+	
+	var scenario = preload("res://scenes/scenario/scenario.tscn" )
+	var instance =scenario.instantiate()
+	instance.position=Vector2(0,0)
+	instance.ready
+	add_child(instance)
+	var coordenadas=Vector2(-48*16,-53*16)
+	print(coordenadas)
+	var habitacion = preload("res://scenes/scenario/zone/Zone.tscn")
+	var r_instance=habitacion.instantiate()
+	r_instance.position=coordenadas
+	add_child(r_instance)
+	#_init_scenario(Scenario.new("Scnario_1"))
 	# Create scenarios
 	#var forest_scenario = Scenario.new("Dark Forest", "Adventure", [])
 	#
@@ -36,6 +48,8 @@ func _ready():
 	#get_parent().add_child(spawn)
 	#print("Scenario Camps:", first_mission_details.scenario.camps)
 func _init_scenario(scenario):
-	var map_scenario:= preload("res://scenes/scenario/scenario.tscn" )
-	map_scenario.instantiate()
+	scenario.instance()
+	add_child(scenario)
+	#var map_scenario:= preload("res://scenes/scenario/scenario.tscn" )
+	#map_scenario.instantiate()
 	
