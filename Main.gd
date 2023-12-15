@@ -1,5 +1,63 @@
 extends Node2D
 var _world := preload("res://World.tscn" )
+
+var As:=[
+	preload("res://scenes/scenario/zone/A/A_a.tscn"),
+	preload("res://scenes/scenario/zone/A/A_b.tscn"),
+	preload("res://scenes/scenario/zone/A/A_c.tscn")
+	]
+var Bs:=[
+	preload("res://scenes/scenario/zone/B/B_a.tscn"),
+	preload("res://scenes/scenario/zone/B/B_b.tscn"),
+	preload("res://scenes/scenario/zone/B/B_c.tscn")
+	]
+var Cs:=[
+	preload("res://scenes/scenario/zone/C/C_a.tscn"),
+	preload("res://scenes/scenario/zone/C/C_b.tscn"),
+	preload("res://scenes/scenario/zone/C/C_c.tscn")
+	]	
+var Ds:=[
+	preload("res://scenes/scenario/zone/D/D_a.tscn"),
+	preload("res://scenes/scenario/zone/D/D_b.tscn"),
+	preload("res://scenes/scenario/zone/D/D_c.tscn")
+	]		
+var Es:=[
+	preload("res://scenes/scenario/zone/E/E_a.tscn"),
+	preload("res://scenes/scenario/zone/E/E_b.tscn"),
+	preload("res://scenes/scenario/zone/E/E_c.tscn")
+	]	
+
+var Fs:=[
+	preload("res://scenes/scenario/zone/F/F_a.tscn"),
+	preload("res://scenes/scenario/zone/F/F_b.tscn"),
+	preload("res://scenes/scenario/zone/F/F_c.tscn")
+	]	
+var Gs:=[
+	preload("res://scenes/scenario/zone/G/G_a.tscn"),
+	preload("res://scenes/scenario/zone/G/G_b.tscn"),
+	preload("res://scenes/scenario/zone/G/G_c.tscn")
+	]		
+
+var Hs:=[
+	preload("res://scenes/scenario/zone/H/H_a.tscn"),
+	preload("res://scenes/scenario/zone/H/H_b.tscn"),
+	preload("res://scenes/scenario/zone/H/H_c.tscn")
+	]
+var Is:=[
+	preload("res://scenes/scenario/zone/I/I_a.tscn"),
+	preload("res://scenes/scenario/zone/I/I_b.tscn"),
+	preload("res://scenes/scenario/zone/I/I_c.tscn")
+	]
+var Js:=[
+	preload("res://scenes/scenario/zone/J/J_a.tscn"),
+	preload("res://scenes/scenario/zone/J/J_b.tscn"),
+	preload("res://scenes/scenario/zone/J/J_c.tscn")
+	]
+var Ks:=[
+	preload("res://scenes/scenario/zone/K/K_a.tscn"),
+	preload("res://scenes/scenario/zone/K/K_b.tscn"),
+	preload("res://scenes/scenario/zone/K/K_c.tscn")
+	]	
 func _ready():
 	
 	var scenario = preload("res://scenes/scenario/scenario.tscn" )
@@ -9,18 +67,18 @@ func _ready():
 	add_child(instance)
 	
 	
-	
+	var rng = RandomNumberGenerator.new()
 	
 	var A_cord=Vector2(-48*16,-53*16)
 	print(A_cord)
-	var A = preload("res://scenes/scenario/zone/A/A_a.tscn")
+	var A = As[rng.randi_range(0,As.size()-1)]
 	var A_instance=A.instantiate()
 	A_instance.position=A_cord
 	add_child(A_instance)
 	
 	var I_cord=Vector2(16*16,-53*16)
 	print(I_cord)
-	var I = preload("res://scenes/scenario/zone/I/I_a.tscn")
+	var I = Is[rng.randi_range(0,Is.size()-1)]
 	var I_instance=I.instantiate()
 	I_instance.position=I_cord
 	add_child(I_instance)
@@ -28,21 +86,21 @@ func _ready():
 	
 	var K_cord=Vector2(48*16,-53*16)
 	print(K_cord)
-	var K = preload("res://scenes/scenario/zone/K/K_a.tscn")
+	var K = Ks[rng.randi_range(0,Ks.size()-1)]
 	var K_instance=K.instantiate()
 	K_instance.position=K_cord
 	add_child(K_instance)
 	
 	var B_cord=Vector2(-48*16,-21*16)
 	print(B_cord)
-	var B = preload("res://scenes/scenario/zone/B/B_a.tscn")
+	var B = Bs[rng.randi_range(0,Bs.size()-1)]
 	var B_instance=B.instantiate()
 	B_instance.position=B_cord
 	add_child(B_instance)	
 	
 	var C_cord=Vector2(-48*16,11*16)
 	print(C_cord)
-	var C = preload("res://scenes/scenario/zone/C/C_a.tscn")
+	var C = Cs[rng.randi_range(0,Cs.size()-1)]
 	var C_instance=C.instantiate()
 	C_instance.position=C_cord
 	add_child(C_instance)
@@ -50,7 +108,7 @@ func _ready():
 	
 	var H_cord=Vector2(-16*16,-21*16)
 	print(H_cord)
-	var H = preload("res://scenes/scenario/zone/H/H_a.tscn")
+	var H = Hs[rng.randi_range(0,Hs.size()-1)]
 	var H_instance=H.instantiate()
 	H_instance.position=H_cord
 	add_child(H_instance)
@@ -58,7 +116,7 @@ func _ready():
 	
 	var J_cord=Vector2(16*16,-21*16)
 	print(J_cord)
-	var J = preload("res://scenes/scenario/zone/J/J_a.tscn")
+	var J = Ks[rng.randi_range(0,Js.size()-1)]
 	var J_instance=J.instantiate()
 	J_instance.position=J_cord
 	add_child(J_instance)
@@ -66,7 +124,7 @@ func _ready():
 	
 	var G_cord=Vector2(-16*16,11*16)
 	print(G_cord)
-	var G = preload("res://scenes/scenario/zone/G/G_a.tscn")
+	var G = Gs[rng.randi_range(0,Gs.size()-1)]
 	var G_instance=G.instantiate()
 	G_instance.position=G_cord
 	add_child(G_instance)		
@@ -76,21 +134,21 @@ func _ready():
 	
 	var D_cord=Vector2(-48*16,43*16)
 	print(D_cord)
-	var D = preload("res://scenes/scenario/zone/D/D_a.tscn")
+	var D = Ds[rng.randi_range(0,Ds.size()-1)]
 	var D_instance=D.instantiate()
 	D_instance.position=D_cord
 	add_child(D_instance)	
 	
 	var E_cord=Vector2(16*16,43*16)
 	print(E_cord)
-	var E = preload("res://scenes/scenario/zone/E/E_a.tscn")
+	var E = Es[rng.randi_range(0,Es.size()-1)]
 	var E_instance=E.instantiate()
 	E_instance.position=E_cord
 	add_child(E_instance)
 	
 	var F_cord=Vector2(48*16,43*16)
 	print(F_cord)
-	var F = preload("res://scenes/scenario/zone/F/F_a.tscn")
+	var F = Fs[rng.randi_range(0,Fs.size()-1)]
 	var F_instance=F.instantiate()
 	F_instance.position=F_cord
 	add_child(F_instance)
