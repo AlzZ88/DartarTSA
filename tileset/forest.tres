@@ -1,4 +1,4 @@
-[gd_resource type="TileSet" load_steps=31 format=3 uid="uid://d2k0r3xkw7w7r"]
+[gd_resource type="TileSet" load_steps=33 format=3 uid="uid://d2k0r3xkw7w7r"]
 
 [ext_resource type="Texture2D" uid="uid://c76hx6wktgrsi" path="res://textures/tileset/grass.png" id="1_xmlsf"]
 [ext_resource type="Texture2D" uid="uid://7a3mpnmtwr37" path="res://textures/tileset/plains.png" id="2_aupqn"]
@@ -26,6 +26,12 @@ tile_data = PackedInt32Array(196608, 524290, 8, 196609, 589826, 8, 393217, 19661
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_jq8ad"]
 tile_data = PackedInt32Array(65536, 524290, 6, 131072, 524290, 7, 65537, 589826, 6, 131073, 589826, 7, 196609, 196610, 9, 262145, 196610, 10, 327681, 196610, 11, 196610, 262146, 9, 262146, 262146, 10, 327682, 262146, 11, 196611, 327682, 9, 262147, 327682, 10, 327683, 327682, 11, 6, 2, 5, 65542, 2, 6, 131078, 2, 7, 7, 65538, 5, 65543, 65538, 6, 131079, 65538, 7, 327687, 393218, 7, 8, 131074, 5, 65544, 131074, 6, 131080, 131074, 7, 327688, 458754, 7)
+
+[sub_resource type="TileMapPattern" id="TileMapPattern_wim36"]
+tile_data = PackedInt32Array(0, 5, 3, 65536, 5, 4, 131072, 5, 5, 1, 65541, 3, 65537, 65541, 4, 131073, 65541, 5, 2, 131077, 3, 65538, 131077, 4, 131074, 131077, 5, 3, 196613, 3, 65539, 196613, 4, 131075, 196613, 5, 4, 262149, 3, 65540, 262149, 4, 131076, 262149, 5)
+
+[sub_resource type="TileMapPattern" id="TileMapPattern_ylepb"]
+tile_data = PackedInt32Array(0, 5, 0, 65536, 5, 1, 131072, 5, 2, 196608, 5, 3, 262144, 5, 4, 1, 65541, 0, 65537, 65541, 1, 131073, 65541, 2, 196609, 65541, 3, 262145, 65541, 4, 2, 131077, 0, 65538, 131077, 1, 131074, 131077, 2, 196610, 131077, 3, 262146, 131077, 4, 3, 196613, 0, 65539, 196613, 1, 131075, 196613, 2, 196611, 196613, 3, 262147, 196613, 4, 65540, 262149, 1, 131076, 262149, 2, 196612, 262149, 3, 262148, 262149, 4)
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_a3x4l"]
 tile_data = PackedInt32Array(0, 196610, 5, 65536, 196610, 6, 131072, 196610, 7, 196608, 196610, 8, 1, 262146, 5, 65537, 262146, 6, 131073, 262146, 7, 196609, 262146, 8, 2, 327682, 5, 65538, 327682, 6, 131074, 327682, 7, 196610, 327682, 8)
@@ -787,3 +793,5 @@ pattern_10 = SubResource("TileMapPattern_upyao")
 pattern_11 = SubResource("TileMapPattern_igu46")
 pattern_12 = SubResource("TileMapPattern_6nsm5")
 pattern_13 = SubResource("TileMapPattern_jq8ad")
+pattern_14 = SubResource("TileMapPattern_wim36")
+pattern_15 = SubResource("TileMapPattern_ylepb")
